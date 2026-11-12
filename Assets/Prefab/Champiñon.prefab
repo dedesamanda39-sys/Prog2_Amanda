@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1417783093164492834}
   - component: {fileID: 5622569799380328896}
+  - component: {fileID: 4840661196533113802}
   - component: {fileID: 1472213772753587927}
   - component: {fileID: 4256924753645874497}
-  - component: {fileID: 503489118810683985}
   - component: {fileID: 4349804606654477777}
+  - component: {fileID: 1407369002880191311}
   m_Layer: 0
   m_Name: "Champi\xF1on"
   m_TagString: Enemigo
@@ -91,6 +92,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &4840661196533113802
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2291953564764043190}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!95 &1472213772753587927
 Animator:
   serializedVersion: 7
@@ -159,18 +187,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.5, y: 2.7113922}
   m_EdgeRadius: 0
---- !u!114 &503489118810683985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2291953564764043190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d2cb3dc8f352a943a35c658ec025f77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4349804606654477777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,3 +201,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   distance: 10
+--- !u!114 &1407369002880191311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2291953564764043190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114ab0308216d02409f696e88526986a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 3
+  cantidad: 1

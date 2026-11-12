@@ -10,7 +10,7 @@ public class DeathZone : MonoBehaviour
 
             if (health != null)
             {
-                health.TakeDamage();
+                health.TakeDamage(1);
             }
         }
     }

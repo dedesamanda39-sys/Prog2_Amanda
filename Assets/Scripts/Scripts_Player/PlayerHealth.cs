@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
         UpdateLivesText();
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
         lives--;
 
