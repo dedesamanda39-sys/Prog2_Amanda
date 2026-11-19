@@ -5,9 +5,9 @@ public class EnemyBase : MonoBehaviour
     public int vida = 3;
     public int cantidad = 1;
 
-    public void TakeDamage(int cantidad)
+    public void TakeDamage(int danoRecibido)
     {
-        vida -= cantidad;
+        vida -= danoRecibido;
 
         if (vida <= 0)
         {
@@ -24,9 +24,12 @@ public class EnemyBase : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
-            Debug.Log("Enemigo toco al jugador " + cantidad + " de daño");
+            PlayerHealth healt = collision.gameObject.GetComponent<PlayerHealth>();
+            if (healt != null)
+            {
+                healt.TakeDamage(cantidad);
+                Debug.Log("Enemigo toco al jugador " + cantidad + " de daño");
+            }       
         }
     }
-
 }
